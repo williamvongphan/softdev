@@ -72,6 +72,17 @@ def parse_stream(stream):
             current_period = ""
             current_name = ""
             current_ducky = ""
+    # We hit the end of the stream
+    # Try to save the last krewe member
+    if current_period != "" and current_name != "" and current_ducky != "":
+        # We may need to trim off newlines from current_ducky
+        if current_ducky[-1] == "\n":
+            current_ducky = current_ducky[:-1]
+        krewe_member = (current_name, current_ducky)
+        if current_period in krewes:
+            krewes[current_period].append(krewe_member)
+        else:
+            krewes[current_period] = [krewe_member]
 
     return krewes
 
@@ -82,4 +93,5 @@ def choose_krewe_member(krewes):
     return (period, krewe_member)
 
 krewes = parse_stream(krewes_stream)
-print("Chose " + str(choose_krewe_member(krewes)[1][0]) + " from period " + str(choose_krewe_member(krewes)[0]) + " (their ducky is " + str(choose_krewe_member(krewes)[1][1]) + ")")
+krewe_member = choose_krewe_member(krewes)
+print("Chose " + krewe_member[1][0] + " from period " + krewe_member[0] + " with ducky " + krewe_member[1][1])
