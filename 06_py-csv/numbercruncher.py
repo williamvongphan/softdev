@@ -3,7 +3,7 @@ Hui Wang, William Vongphanith
 Softdev
 K06 -- StI/O: Divine your Destiny!
 2022-09-29
-Time Spent: 0.5 hour
+Time Spent: 0.3 hour
 """
 
 """
