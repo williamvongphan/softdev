@@ -30,7 +30,6 @@ def parse_stream(stream):
     current_name = ""
     current_ducky = ""
     
-    current_character = ""
     dollar_sign_count = 0
     at_sign_count = 0
     
@@ -40,25 +39,22 @@ def parse_stream(stream):
         if i == "$":
             dollar_sign_count += 1
             at_sign_count = 0
-            current_character = "$"
         elif i == "@":
             at_sign_count += 1
             dollar_sign_count = 0
-            current_character = "@"
         else:
-            current_character = i
             if current_parsing_type == "period":
-                current_period += current_character
+                current_period += i
             elif current_parsing_type == "name":
-                current_name += current_character
+                current_name += i
             elif current_parsing_type == "ducky":
-                current_ducky += current_character
+                current_ducky += i
         
-        if current_character == "$" and dollar_sign_count == 3:
+        if i == "$" and dollar_sign_count == 3:
             dollar_sign_count = 0
             current_parsing_type = next_element(parsing_types, current_parsing_type)
         
-        if current_character == "@" and at_sign_count == 3:
+        if i == "@" and at_sign_count == 3:
             at_sign_count = 0
             current_parsing_type = next_element(parsing_types, current_parsing_type)
             
