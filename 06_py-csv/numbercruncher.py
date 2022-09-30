@@ -8,11 +8,11 @@ Time Spent: 0.3 hour
 
 """
 DISCO:
-    - You can use the csv module to read and write csv files.
-    - You can use the random module to generate random numbers.
+    - The csv module is very useful for reading csv files (when you don't want to parse them yourself)
+    - You can use the csv.DictReader() function to read a csv file into a dictionary (instead of a list of lists)
     
 QCC:
-    - How do you use the csv module to write to a csv file?
+    - Can you use the csv module to write to a csv file from a dictionary?
     
 OPS SUMMARY:
     - We used the csv module to read the csv file
