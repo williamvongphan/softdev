@@ -16,7 +16,7 @@ def hello_world():
     return "No hablo queso!"  # Q4: Will this appear anywhere? How u know?
 
 app.run(
-    host="0.0.0.0",
+    host="0.0.0.0", # fix for remote machine -- allows me to access from 1.mcdns.me:5000
 )  # Q5: Where have you seen similar constructs in other languages?
 
 
