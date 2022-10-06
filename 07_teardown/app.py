@@ -35,3 +35,12 @@ INVESTIGATIVE APPROACH:
  you and your team set about
  "illuminating the cave of ignorance" here...>
 '''
+
+"""
+`__name__` is a special Python variable that is set to the name of the current module.
+When you run a Python module with python <module-name>.py, the interpreter sets the special
+`__name__` variable to have a value `__main__`. If this file is being imported from another
+module, then `__name__` will be set to the module's name.
+
+This variable is set by the interpreter, and you can reference it from your code.
+"""
