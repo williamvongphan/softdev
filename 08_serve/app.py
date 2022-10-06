@@ -12,4 +12,8 @@ def occupation():
     return choose_occupation()
 
 # serve to world
-app.run(host='0.0.0.0')
+def main():
+    app.run(host='0.0.0.0')
+
+if __name__ == '__main__':
+    main()
