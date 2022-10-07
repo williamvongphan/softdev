@@ -26,16 +26,26 @@ app.run explicitly in main().
 
 from numbercruncher import choose_occupation
 from flask import Flask
-app = Flask(__name__) #create instance of class Flask
 
-@app.route("/")       #assign fxn to route
+app = Flask(__name__)  # create instance of class Flask
+
+
+@app.route("/")  # assign fxn to route
 def occupation():
+    """
+    Returns the output of choose_occupation from numbercruncher.py as a string to Flask
+
+    Returns:
+        str: output of choose_occupation
+    """
     # choose occupation
     return choose_occupation()
+
 
 # serve to world
 def main():
     app.run(host='0.0.0.0')
 
+# main function, run when file is called directly
 if __name__ == '__main__':
     main()

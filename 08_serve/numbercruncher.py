@@ -3,6 +3,12 @@ import random
 
 
 def choose_occupation():
+    """
+    Chooses an occupation from the csv file and returns it as a string
+
+    Returns:
+        str: occupation chosen
+    """
     with open('occupations.csv', newline='') as csvfile:
         # read that dict
         reader = csv.DictReader(csvfile)
