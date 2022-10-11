@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team KReWEs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Get the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+<style>
+
+@keyframes gradient {
+    0% {
+	background-position: 0% 50%;
+    }
+    50% {
+	background-position: 100% 50%;
+    }
+    100% {
+	background-position: 0% 50%;
+    }
+}
+
+#title {
+	/* clip text to gradient */
+	-webkit-background-clip: text !important;
+	-moz-background-clip: text !important;
+	-o-background-clip: text !important;
+	background-clip: text !important;
+	/* set text color to transparent */
+	color: transparent;
+	font-size: 100px;
+	font-weight: bold;
+	text-align: center;
+	font-family: "Inter", sans-serif;
+	background: linear-gradient(60deg, #FF0000 0%, #FF7F00 10%, #FFFF00 20%, #00FF00 30%, #0000FF 40%, #4B0082 50%, #9400D3 60%, #FF0000 70%, #FF7F00 80%, #FFFF00 90%, #00FF00 100%);
+	background-size: 1800% 1800%;
+	animation: gradient 15s ease infinite;
+}
+
+.roster-el {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sub-el {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+#roster {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* remove the dots from the list */
+    list-style-type: none !important;
+}
+</style>
+</head>
+    <body>
+	    <h1 id="title">Team KReWEs</h1>
+	    <p id="roster">
+	    <div>
+		    <p class="roster-el">William Vongphanith</p>
+		    <p class="roster-el">Elizabeth Paperno</p>
+		    <p class="roster-el">Kosta Dubovskiy</p>
+		    <p class="roster-el">Ruiwen "Raven" Tang</p>
+		    <p class="sub-el">This is a really good website, right! REALLY GOOD. <!-- Rickroll --> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here</a> to see how we made it!</p>
+	    </div>
+	    </p>
+	    </body>
+	    </html>
