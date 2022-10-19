@@ -18,3 +18,6 @@ Time spent: 1 hour
 4. Realized the website was in Liberation Sans, so we had to import that font
 5. Imported fonts
 6. Redo lorem ipsum
+
+## Lorem Ipsum generator
+We used [StuyCS Ipsum](https://stuycs-ipsum.williamvongphanith.com/) to generate the lorem ipsum text. We highly recommend it.
