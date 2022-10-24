@@ -25,7 +25,7 @@ sqlite> CREATE TABLE students (name TEXT, age INTEGER);
 ```
 
 <div>
-<img src="https://cdn.thdr.me/stuycs/me.png" width="100" height="100" style="margin-right: 15px" align="left">
+<img src="https://cdn.thdr.me/stuycs/me.png" width="50" height="50" style="margin-right: 15px" align="left">
 <blockquote>Wait, can you explain that command in more depth? Specifically, what is the `TEXT` and `INTEGER` part?
 </blockquote>
 </div>
