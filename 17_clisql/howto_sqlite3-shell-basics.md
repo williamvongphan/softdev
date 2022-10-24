@@ -8,6 +8,7 @@ The sqlite3 shell is a command line interface (CLI) that allows you to interact 
 ### Prerequisites:
 * SQLite3 installed on your computer
 * Willingness to learn (!)
+* A good markdown renderer (this document doesn't look nice when raw)
 
 ### Pathway to Success
 Open up your terminal and type `sqlite3`. You should see something like this:
