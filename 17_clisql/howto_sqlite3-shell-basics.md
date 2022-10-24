@@ -29,6 +29,7 @@ sqlite> CREATE TABLE students (name TEXT, age INTEGER);
 Wait, you're going a bit too fast. Can you explain that command in more depth? Specifically, what are the <code>TEXT</code> and <code>INTEGER</code> parts?
 </div>
 <br>
+<br>
 <div>
 <img src="https://cdn.thdr.me/stuycs/thluffy.png" width="50" height="50" style="margin-right: 15px" align="left">
 Yes! The <code>CREATE TABLE</code> command is used to create a new table in the database. The first argument is the name of the table, which you'll be using when you want to retrieve data from it. The second argument is a list of columns, which are the different pieces of data you want to store. Each column has a name and a type. The type is used to tell SQLite what kind of data you're storing in that column. For example, if you want to store a person's name, you would use the <code>TEXT</code> type. If you want to store a person's age, you would use the <code>INTEGER</code> type. Other common types are <code>REAL</code> (for floating point numbers) and <code>BLOB</code> (for binary data). A full list of types can be found <a href="https://www.sqlite.org/datatype3.html">here</a>.
