@@ -37,11 +37,11 @@ sqlite> CREATE TABLE students (name TEXT, age INTEGER);
 </i>
 </div>
 
+
 Now that we have a table, we can insert data into it. We can do this using the `INSERT INTO` command. You would provide the name of the table, the names of the columns you want to insert data into, and the data itself. Here's an example:
 ```sql
 sqlite> INSERT INTO students (name, age) VALUES ("Thluffy", 15);
 ```
-
 <div>
 <img src="https://cdn.thdr.me/stuycs/me.png" width="50" height="50" style="margin-right: 15px" align="left">
 <i>I'm still a bit confused. What does the <code>VALUES</code> part do?</i>
@@ -53,6 +53,7 @@ sqlite> INSERT INTO students (name, age) VALUES ("Thluffy", 15);
 <i>Great question! The <code>VALUES</code> part is used to specify the data you want to insert into the table. Since we specified the names of the columns we want to insert data into, we need to provide the same number of values. The values are provided in the same order as the columns. So in this case, we're inserting the name "Thluffy" into the <code>name</code> column and the age 15 into the <code>age</code> column.
 </i>
 </div>
+
 
 And that's it! It really is all that simple. You've just created a table and inserted data into it. You can see the data you've inserted by using the `SELECT` command. Here's an example:
 ```sql
@@ -91,6 +92,7 @@ sqlite> SELECT * FROM students WHERE age > 10;
 </i>
 </div>
 
+
 What if you want to update data in a table? You can do this using the `UPDATE` command. Here's an example:
 ```sql
 sqlite> UPDATE students SET age = 21 WHERE name = "Thluffy";
@@ -112,6 +114,7 @@ sqlite> UPDATE students SET age = 21 WHERE name = "Thluffy";
 </ul>
 </i>
 </div>
+
 
 And finally, there's always a chance that you'll want to delete data from a table. You can do this using the `DELETE` command. Here's an example:
 ```sql
