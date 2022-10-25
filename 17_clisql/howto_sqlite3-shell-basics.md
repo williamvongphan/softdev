@@ -155,6 +155,6 @@ sqlite> DELETE FROM students WHERE name = "Thluffy";
 Accurate as of (last update): 2022-10-24
 
 #### Contributors:  
-William Vongphanith
-Julia Lee
-Jeffrey Zou
+William Vongphanith (content, review, formatting v2, images) 
+Julia Lee (content, review, formatting v1)  
+Jeffrey Zou (content, review, formatting v1) 
