@@ -132,7 +132,47 @@ sqlite> DELETE FROM students WHERE name = "Thluffy";
 <i>You can use the <code>DELETE</code> command without a <code>WHERE</code> clause to delete all the data in a table. For example, <code>DELETE FROM students;</code> will delete all the data in the <code>students</code> table. Be careful though, because once you delete data, it's gone forever!
 </i>
 </div>
-    
+
+### Pro tips
+*(**Note**: This is extra information beyond the scope of this assignment. Feel free to skip this section if you want to.)*
+
+- SQLite CLI contains numerous shell commands that can be used to perform various tasks. Some of the most useful ones are:
+  - `.mode` - This command can be used to change the output mode of the CLI. The choices are ascii, csv, column, html, insert, line, list, tabs, and tcl. The default mode is ascii.
+  - `.headers` - This command can be used to toggle the display of column names. The default is on.
+  - `.help` - This command can be used to display a list of all the available shell commands.
+  - `.exit` - This command can be used to exit the CLI.
+  - `.tables` - This command can be used to display a list of all the tables in the database.
+  - `.schema` - This command can be used to display the schema of a table. For example, `.schema students` will display the schema of the students table.
+  - `.dump` - This command can be used to display the contents of the database. This is useful if you want to save the contents of the database to a file.
+  - `.import` - This command can be used to import data from a file into a table. For example, `.import students.csv students` will import the data from the students.csv file into the students table.
+  - `.output` - This command can be used to redirect the output of a command to a file. For example, `.output students.csv` will redirect the output of the `SELECT` command to the students.csv file.
+  - `.read` - This command can be used to execute a SQL script. For example, `.read students.sql` will execute the SQL commands in the students.sql file.
+- You can use the `LIMIT` clause to limit the number of rows returned by a query. Here's an example:
+  ```sql
+  sqlite> SELECT * FROM students LIMIT 5;
+  ```
+- One of the most useful features of SQLite is the ability to create views. Views are virtual tables that are created using a query. Here's an example:
+  ```sql
+  sqlite> CREATE VIEW students_over_10 AS SELECT * FROM students WHERE age > 10;
+  ```
+  You can then use the `SELECT` command to query the view:
+  ```sql
+  sqlite> SELECT * FROM students_over_10;
+  ```
+- Queries can be nested. Here's an example:
+  ```sql
+  sqlite> SELECT * FROM students WHERE age > (SELECT AVG(age) FROM students);
+  ```
+- SQLite supports a wide variety of functions. Here's a list of some of the most useful ones:
+  - `ABS()` - Returns the absolute value of a number.
+  - `AVG()` - Returns the average value of a column.
+  - `COUNT()` - Returns the number of rows in a table.
+  - `LOWER()` - Converts a string to lowercase.
+  - `MAX()` - Returns the maximum value of a column.
+  - `MIN()` - Returns the minimum value of a column.
+  - `ROUND()` - Rounds a number to a specified number of decimal places.
+  - `SUM()` - Returns the sum of a column.
+  - `UPPER()` - Converts a string to uppercase.
 ### Check your understanding
 1. Create a table named `krewes` with the following columns:
     - `name` (text)
