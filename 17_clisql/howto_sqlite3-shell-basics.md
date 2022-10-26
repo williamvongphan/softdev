@@ -147,6 +147,7 @@ sqlite> DELETE FROM students WHERE name = "Thluffy";
   - `.import` - This command can be used to import data from a file into a table. For example, `.import students.csv students` will import the data from the students.csv file into the students table.
   - `.output` - This command can be used to redirect the output of a command to a file. For example, `.output students.csv` will redirect the output of the `SELECT` command to the students.csv file.
   - `.read` - This command can be used to execute a SQL script. For example, `.read students.sql` will execute the SQL commands in the students.sql file.
+  - `.save` - This command can be used to save the contents of the database to a file. For example, `.save students.db` will save the contents of the database to the students.db file.
 - You can use the `LIMIT` clause to limit the number of rows returned by a query. Here's an example:
   ```sql
   sqlite> SELECT * FROM students LIMIT 5;
@@ -173,6 +174,7 @@ sqlite> DELETE FROM students WHERE name = "Thluffy";
   - `ROUND()` - Rounds a number to a specified number of decimal places.
   - `SUM()` - Returns the sum of a column.
   - `UPPER()` - Converts a string to uppercase.
+
 ### Check your understanding
 1. Create a table named `krewes` with the following columns:
     - `name` (text)
