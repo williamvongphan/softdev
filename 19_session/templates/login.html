@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QR Code Generators Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="login">
+	<h1>Login</h1>
+	<form method="post" action="login.php">
+	    <input type="text" name="username" placeholder="Username" required="required" />
+	    <input type="password" name="password" placeholder="Password" required="required" />
+	    <button type="submit" class="button">Let me in.
+                <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                    <g fill-rule="evenodd">
+                        <path class="hover-arrow-line-path" d="M0 5h7"></path>
+                        <path class="hover-arrow-tip-path" d="M1 1l4 4-4 4"></path>
+                    </g>
+                </svg>
+	    </button>
+	</form>
+    </div>
+</body>
