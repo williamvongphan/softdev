@@ -2,24 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>QR Code Generators Response</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <!-- Load the fonts from /static/css/font.css, but defer loading the font files until the page is loaded. -->
-    <link rel="preload" href="/static/css/font.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   </head>
   <body>
     <h1>Home</h1>
-    <p class="response">{{ response }}</p>
+    <p>{{ response }}</p>
     <p>QR Code Generators:</p>
-    <ul class="roster">
-	    <li class="person">William Vongphanith</li>
-	    <li class="person">Julia Lee</li>
-	    <li class="person">Jeffrey Zou</li>
+    <ul>
+	    <li>William Vongphanith</li>
+	    <li>Julia Lee</li>
+	    <li>Jeffrey Zou</li>
     </ul>
-    <form class="form" action="logout" method="post">
+    <form action="logout" method="post">
         <!-- Put it in a form for centering purposes. -->
         <button class="button center" type="submit">Logout</button>
     </form>
-    <script src="/static/js/button.js"></script>
   </body>
 </html>

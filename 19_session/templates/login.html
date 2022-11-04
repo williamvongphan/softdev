@@ -3,23 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title>QR Code Generators Login</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="preload" href="/static/css/font.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </head>
 <body>
-    <div class="login">
+    <div>
 	<h1>Login</h1>
-	<form method="post" action="login" class="form">
-	    <input type="text" name="username" placeholder="Username" required="required" class="input" />
-	    <input type="password" name="password" placeholder="Password" required="required" class="input" />
+	<form method="post" action="login">
+	    <input type="text" name="username" placeholder="Username" required="required" />
+	    <input type="password" name="password" placeholder="Password" required="required" />
 	    <button type="submit" class="button">
             Let me in.
 	    </button>
 	</form>
-    <p class="error">
+    <p>
         {{ error }}
     </p>
     </div>
-    <!-- For design purposes only, this JavaScript code does not change the functionality of the login page. -->
-    <script src="/static/js/button.js"></script>
 </body>
