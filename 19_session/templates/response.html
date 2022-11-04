@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Response</title>
+    <meta charset="utf-8">
+    <title>QR Code Generators Response</title>
+    <link rel="stylesheet" href="/static/css/style.css">
   </head>
   <body>
-    <h1>Response</h1>
-    <p>Response: {{ response }}</p>
+    <h1>Home</h1>
+    <p class="response">{{ response }}</p>
     <p>QR Code Generators:</p>
-    <ul>
-	    <li>William Vongphanith</li>
-	    <li>Julia Lee</li>
-	    <li>Jeffrey Zou</li>
+    <ul class="roster">
+	    <li class="person">William Vongphanith</li>
+	    <li class="person">Julia Lee</li>
+	    <li class="person">Jeffrey Zou</li>
     </ul>
+    <form class="form" action="logout" method="post">
+        <!-- Put it in a form for centering purposes. -->
+        <button class="button center" type="submit">Logout</button>
+    </form>
+    <script src="/static/js/button.js"></script>
   </body>
 </html>

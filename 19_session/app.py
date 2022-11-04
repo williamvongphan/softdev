@@ -10,8 +10,9 @@ PASSWORD = 'strong password'
 @app.route('/')
 def index():
     # Check if the user is logged in
+    print(session)
     if 'username' in session:
-        return render_template('index.html', username=session['username'])
+        return render_template('response.html', response="Hello, " + session['username'] + "!")
     return redirect(url_for('login'))
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -35,10 +36,12 @@ def login():
                 return render_template('login.html', error='Bad juju')
     return render_template('login.html')
 
-@app.route('/logout')
+@app.route('/logout', methods=['GET', 'POST'])
 def logout():
-    # Remove the username from the session if it's there
-    session.pop('username', None)
+    # Check if the user is logged in
+    if 'username' in session:
+        session.pop('username', None)
+        return redirect(url_for('index'))
     return redirect(url_for('login'))
 
 if __name__ == '__main__':

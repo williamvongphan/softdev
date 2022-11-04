@@ -8,17 +8,17 @@
 <body>
     <div class="login">
 	<h1>Login</h1>
-	<form method="post" action="login.php">
-	    <input type="text" name="username" placeholder="Username" required="required" />
-	    <input type="password" name="password" placeholder="Password" required="required" />
-	    <button type="submit" class="button">Let me in.
-                <svg class="hover-arrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
-                    <g fill-rule="evenodd">
-                        <path class="hover-arrow-line-path" d="M0 5h7"></path>
-                        <path class="hover-arrow-tip-path" d="M1 1l4 4-4 4"></path>
-                    </g>
-                </svg>
+	<form method="post" action="login" class="form">
+	    <input type="text" name="username" placeholder="Username" required="required" class="input" />
+	    <input type="password" name="password" placeholder="Password" required="required" class="input" />
+	    <button type="submit" class="button">
+            Let me in.
 	    </button>
 	</form>
+    <p class="error">
+        {{ error }}
+    </p>
     </div>
+    <!-- For design purposes only, this JavaScript code does not change the functionality of the login page. -->
+    <script src="/static/js/button.js"></script>
 </body>
