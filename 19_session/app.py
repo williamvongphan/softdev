@@ -2,7 +2,7 @@ import flask
 from flask import session, render_template, request, redirect, url_for
 
 app = flask.Flask(__name__)
-app.secret_key = 'super secret key (this is very strong and can be used in production)'
+app.secret_key = 'super secret key (this is very strong and can be used in production, yes I know it is extremely secure, over 9000)'
 
 USERNAME = 'QR Code Generators'
 PASSWORD = 'strong password'

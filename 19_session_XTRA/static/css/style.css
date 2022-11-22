@@ -77,6 +77,8 @@ a:hover:after {
     position: relative;
     background-color: transparent;
     font-family: var(--fonts);
+    color: #000;
+    overflow: hidden;
 }
 
 .button:hover {
@@ -95,16 +97,17 @@ a:hover:after {
 .button:after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 0%;
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: #000;
+    background-color: #fff;
+    /* Calculate opacity based on doFill prop */
     opacity: 1;
     transform: translateX(-100%);
     transition: all 0.2s ease-in-out;
     z-index: -1;
-    border-radius: 50vh;
+    filter: invert(1);
 }
 
 .button:hover:after {
@@ -123,28 +126,56 @@ a:hover:after {
 }
 
 .hover-arrow-tip-path {
-    stroke: var(--arrow-color, #000);
-    stroke-width: 2;
-    fill: none;
-    margin-left: 0.5rem;
-    transform: translateX(var(--hover-displace, 0));
-    transition: transform 0.2s ease-in-out;
+  stroke-width: 2;
+  fill: none;
+  margin-left: 0.5rem;
+  transform: translateX(var(--hover-displace, 0));
+  transition: all 0.2s cubic-bezier(0.7, 0, 0, 0.7);
 }
 
 .hover-arrow-line-path {
-    stroke: var(--arrow-color, #000);
-    stroke-width: 2;
-    fill: none;
-    opacity: var(--hover-opacity, 0);
-    transition: opacity 0.2s ease-in-out;
+  stroke-width: 2;
+  fill: none;
+  transition: all 0.2s cubic-bezier(0.7, 0, 0, 0.7);
+  opacity: var(--hover-opacity, 0);
+  stroke: #fff;
+  mix-blend-mode: difference;
 }
 
 .hover-arrow {
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateX(var(--hover-displace, 0)) translateY(-0.5px);
-    transition: transform 0.2s ease-in-out;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateY(-0.5px) translateX(2px);
+  transition: transform 0.2s ease-out;
+  stroke: #fff;
+  mix-blend-mode: difference;
 }
+
+.button-inner {
+}
+
+.button-text {
+  display: inline-block;
+  margin-right: 0.25rem;
+  color: #000;
+  mix-blend-mode: difference;
+  filter: invert(1);
+}
+
+.button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 1;
+    transition: all 0.2s ease-out;
+    z-index: -2;
+    border-radius: 50vh;
+}
+
 
 .form {
     display: flex;
