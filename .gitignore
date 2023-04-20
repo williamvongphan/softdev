@@ -46,6 +46,7 @@ ehthumbs.db
 **/*[\\/\:;*?!'"<>|$º•¶§∞¢£]*
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #
+key_nasa.txt
 
 17_clisql/sqlite3.exe
 sqlite3.exe
@@ -55,3 +56,5 @@ sqlite3.exe
 *.dll
 *.so
 *.db
+
+.fleet
